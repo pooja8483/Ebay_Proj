@@ -1,0 +1,21 @@
+Feature:
+	pim module
+
+ Scenario: Verify add custom fields page
+
+	Given user is on orangehrm dashboard
+	When navigate to configuration and click custom fields
+	Then  Defined Custom fields page displayed
+		
+ Scenario: Verify to add custom fields button
+
+	When navigate to configuration and click custom fields
+	And click Add button
+	Then  Add custom fields page displayed	
+
+Scenario: Verify to save a new custom field
+
+	When navigate to configuration and click custom fields
+	And click Add button
+	And Enter Fieldname screen type click save
+	Then  custom field should be added
